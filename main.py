@@ -18,6 +18,11 @@ def main():
 
     maze = Maze(margin, margin, num_rows, num_cols, cell_size_x, cell_size_y, win)
     print("Maze created")
+    is_solvable = maze.solve()
+    if is_solvable:
+        print("Maze is solvable")
+    else:
+        print("Maze is not solvable")
 
     win.wait_for_close()
 
